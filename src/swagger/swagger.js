@@ -1,17 +1,22 @@
-const swaggerAutogen = require('swagger-autogen')();
+const swaggerJsdoc = require('swagger-jsdoc');
 
-const outputFile = './src/swagger/swagger-output.json';
-const endpointsFiles = ['./src/routes/temple.routes.js'];
-
-const doc = {
+const options = {
+  definition: {
+    openapi: '3.0.0',
     info: {
-        title: 'Temple API',
-        description: 'API documentation for the Temple management system',
+      title: 'Temple API',
+      version: '1.0.0',
+      description: 'API for managing temple resources',
     },
-    host: 'localhost:3000',
-    schemes: ['http'],
+    servers: [
+      {
+        url: `http://localhost:${process.env.PORT || 3001}`,
+        description: 'Development server',
+      },
+    ],
+  },
+  apis: ['./src/routes/*.js'], // Path to the API routes
 };
 
-swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
-    require('../app.js'); // Your project's entry point
-});
+const specs = swaggerJsdoc(options);
+module.exports = specs;

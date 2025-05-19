@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+```
+
+## 2. Git Workflow
+
+```bash
+# Initialize Git repository (if not already done)
+git init
+
+# Add all files to staging
+git add .
+
+# Commit your changes
+git commit -m "Initial setup of Temple API with Swagger documentation"
+
+# Add remote repository (if not already configured)
+# Replace with your actual remote repository URL
+git remote add origin <your-repository-url>
+
+# Push changes to the remote repository
+git push -u origin main
+```
+
+If you're using a branch other than `main` (like `master`), adjust the branch name in the last command.
+
+## 3. Verify the Push
+
+After pushing, you can verify that all your files have been pushed to the repository by checking your GitHub/GitLab/Bitbucket account.
+
+## 4. Remember to Test Your API
+
+Before or after pushing, make sure to test your API by running:
+
+```bash
+npm start
+```
+
+Then visit:
+- http://localhost:3001/ for the welcome message
+- http://localhost:3001/api-docs for the Swagger documentation
+- http://localhost:3001/temples to test your GET endpoint
+
+Your Temple API is now set up with MongoDB Atlas, and all changes are ready to be pushed to your repository!

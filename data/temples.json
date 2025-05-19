@@ -33,5 +33,23 @@
         "description": "A temple complex in Cambodia and the largest religious monument in the world.",
         "established": "12th century",
         "type": "Hindu"
+    },
+    {
+        "name": "Salt Lake Temple",
+        "location": "Salt Lake City, Utah, USA",
+        "dedicated": "1893-04-06T00:00:00.000Z",
+        "imageUrl": "https://assets.ldscdn.org/c5/1a/c51a8e0a4309cbea393394a9794aaf8c4b6849e7/salt_lake_temple_lds.jpeg"
+    },
+    {
+        "name": "Provo Temple",
+        "location": "Provo, Utah, USA",
+        "dedicated": "1972-02-09T00:00:00.000Z",
+        "imageUrl": "https://assets.ldscdn.org/cc/dc/ccdc16a25bc12c8147925a7feba7a2cc2ec3324c/provo_temple_lds.jpeg"
+    },
+    {
+        "name": "Rome Italy Temple",
+        "location": "Rome, Italy",
+        "dedicated": "2019-03-10T00:00:00.000Z",
+        "imageUrl": "https://assets.ldscdn.org/e9/92/e9925e3f9c6175aeb2a0e46a149e89835841b831/rome_italy_temple_exterior.jpeg"
     }
 ]
