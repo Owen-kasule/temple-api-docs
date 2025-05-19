@@ -1,0 +1,23 @@
+{
+  "name": "temple-api-docs",
+  "version": "1.0.0",
+  "description": "API documentation for the Temple project using Swagger",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "generate-docs": "swagger-autogen src/swagger/swagger.js -o src/swagger/swagger-output.json"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "swagger-autogen": "^2.20.0",
+    "swagger-ui-express": "^4.1.6",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}

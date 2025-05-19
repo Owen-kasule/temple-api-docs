@@ -1,0 +1,152 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API documentation for the Temple API",
+    "version": "1.0.0",
+    "title": "Temple API"
+  },
+  "host": "localhost:3000",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/temples": {
+      "get": {
+        "summary": "Get all temples",
+        "description": "Returns a list of all temples.",
+        "responses": {
+          "200": {
+            "description": "A list of temples",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Temple"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new temple",
+        "description": "Adds a new temple to the collection.",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "temple",
+            "description": "Temple object to be created",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Temple"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Temple created successfully",
+            "schema": {
+              "$ref": "#/definitions/Temple"
+            }
+          }
+        }
+      }
+    },
+    "/temples/{id}": {
+      "get": {
+        "summary": "Get a temple by ID",
+        "description": "Returns a single temple.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A single temple",
+            "schema": {
+              "$ref": "#/definitions/Temple"
+            }
+          },
+          "404": {
+            "description": "Temple not found"
+          }
+        }
+      },
+      "put": {
+        "summary": "Update a temple",
+        "description": "Updates an existing temple.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "temple",
+            "description": "Temple object with updated information",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Temple"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Temple updated successfully",
+            "schema": {
+              "$ref": "#/definitions/Temple"
+            }
+          },
+          "404": {
+            "description": "Temple not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a temple",
+        "description": "Removes a temple from the collection.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Temple deleted successfully"
+          },
+          "404": {
+            "description": "Temple not found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Temple": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "location"]
+    }
+  }
+}

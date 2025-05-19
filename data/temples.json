@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Temple of Heaven",
+        "location": "Beijing, China",
+        "description": "An imperial complex of religious buildings situated in the southeastern part of central Beijing.",
+        "established": "1420",
+        "type": "Buddhist"
+    },
+    {
+        "name": "Hagia Sophia",
+        "location": "Istanbul, Turkey",
+        "description": "A former Greek Orthodox Christian basilica, later an imperial mosque and now a museum.",
+        "established": "537",
+        "type": "Christian"
+    },
+    {
+        "name": "Kinkaku-ji",
+        "location": "Kyoto, Japan",
+        "description": "A Zen Buddhist temple in Kyoto whose top two floors are completely covered in gold leaf.",
+        "established": "1397",
+        "type": "Buddhist"
+    },
+    {
+        "name": "St. Peter's Basilica",
+        "location": "Vatican City",
+        "description": "An Italian Renaissance church in Vatican City, the papal enclave within the city of Rome.",
+        "established": "1626",
+        "type": "Christian"
+    },
+    {
+        "name": "Angkor Wat",
+        "location": "Siem Reap, Cambodia",
+        "description": "A temple complex in Cambodia and the largest religious monument in the world.",
+        "established": "12th century",
+        "type": "Hindu"
+    }
+]
